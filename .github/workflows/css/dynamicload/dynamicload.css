@@ -1,0 +1,114 @@
+.videoone {
+    opacity: 0;
+    transform: translateX(-25px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.videoone.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.videotwo {
+    opacity: 0;
+    transform: translateX(25px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.videotwo.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.advantages-tabs {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.advantages-tabs.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.questions {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.questions.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.other-links {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.other-links.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.other-gameplay {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.other-gameplay.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.footing {
+    opacity: 0;
+    transform: translateY(-25px);
+    transition: opacity 1s ease, transform 1s ease;
+    backdrop-filter: blur(10px);
+}
+
+.footing.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.agreement {
+    opacity: 0;
+    transition: opacity 3s ease, transform 3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.agreement.visible {
+    opacity: 1;
+}
+
+
+.data {
+    opacity: 0;
+    transition: opacity 3s ease, transform 3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.data.visible {
+    opacity: 1;
+}
+
+.root-screenshots {
+    opacity: 0;
+    transform: translateY(-25px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.root-screenshots.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

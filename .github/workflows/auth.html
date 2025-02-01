@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/icons/essence.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages/auth.css">
+    <link rel="stylesheet" href="css/other/notifications.css">
+    <link rel="stylesheet" href="css/sharing.css">
+
+    <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
+    <script src="js/index.js"></script>
+    <script src="js/notifications.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const authForm = document.getElementById("registerForm");
+            const logElement = document.querySelector(".registration-log");
+
+            authForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const formData = new FormData(authForm);
+                const xhr = new XMLHttpRequest();
+
+                xhr.open("POST", "/register", true);
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        if (xhr.responseText !== "OK") {
+                            notification(false, xhr.responseText);
+                        } else {
+                            window.location.href = "/cabinet";
+                        }
+                    } else {
+                        logElement.textContent
+                    }
+                };
+                xhr.send(formData);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const authForm = document.getElementById("authForm");
+            const logElement = document.querySelector(".authorization-log");
+
+
+            authForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const formData = new FormData(authForm);
+                const xhr = new XMLHttpRequest();
+
+                xhr.open("POST", "/auth", true);
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        if (xhr.responseText === "OK") {
+                            window.location.href = "cabinet";
+                        } else {
+                            notification(false, xhr.responseText);
+                        }
+                    } else {
+                        logElement.textContent = "Ошибка сервера. Попробуйте позже.";
+                    }
+                };
+                xhr.send(formData);
+            });
+        });
+
+    </script>
+    <title>EssenceClient ▸ Вход</title>
+</head>
+
+<body>
+    <div id="loader-wrapper">
+        <i class="bi bi-arrow-clockwise"></i>
+    </div>
+    <header id="header">
+        <div class="heading">
+            <div class="heading-title">
+                <div class="title-name">
+                    <a href="index.html">
+                        <span style="color: white;">Essence</span><span>Client</span>
+                    </a>
+                </div>
+            </div>
+            <div class="heading-nav" id="main-nav">
+                <nav>
+                    <li>
+                        <i class="bi bi-lightning-fill"></i>
+                        <a href="index.html#advantages">Преимущества</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-camera-video-fill"></i>
+                        <a href="index.html#media">Медиа</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-basket-fill"></i>
+                        <a href="index.html#subscribes">Подписка</a>
+                    </li>
+                </nav>
+            </div>
+            <div class="heading-bars" onclick="toggleModal()">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+        <div class="mobile-modal" id="mobileModal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="toggleModal()">&times;</span>
+                <nav>
+                    <li><i class="bi bi-lightning-fill"></i><a href="index.html#advantages">Преимущества</a></li>
+                    <li><i class="bi bi-camera-video-fill"></i><a href="index.html#media">Медиа</a></li>
+                    <li><i class="bi bi-basket-fill"></i><a href="index.html#subscribes">Подписка</a></li>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="entrance">
+            <div class="entrance-signin authpanel" id="signin">
+                <div class="entrancebg">
+                    <img src="assets/icons/essence.svg" alt="">
+                </div>
+                <div class="authpanel-title">
+                    Авторизация
+                    <div class="authpanel-title__description">
+                        Введите свои данные для авторизации
+                    </div>
+                </div>
+                <div class="authpanel-inputs">
+                    <form id="authForm" action="auth.html" method="post">
+                        <div class="email" name="email" id="email">
+                            <input type="text" name="email" id="email" placeholder="Введите e-mail или логин">
+                        </div>
+                        <div class="inputs-password">
+                            <input type="password" name="password" id="password" placeholder="Введите пароль">
+                            <span id="switcheye">
+                                <i class="bi bi-eye-fill togglePassword" style="cursor: pointer;"></i>
+                            </span>
+                        </div>
+                        <div class="authorization-log">
+
+                        </div>
+                        <div class="input-button">
+                            <button>
+                                Войти
+                                <i class="bi bi-box-arrow-in-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="inputs-other">
+                        <div class="input-forgotpassword">
+                            Забыли пароль?
+                            <a href="recovery.html">Восстановить</a>
+                        </div>
+                        <div class="other-cstmline">
+                            <div class="cstmline-line"></div>
+                        </div>
+                        <div class="input-noaccount">
+                            Нет аккаунта?
+                            <a href="auth.html" onclick="return false;">Регистрация</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="entrance-signup authpanel" style="display: none; height: 500px;" id="singup">
+                <div class="authpanel-title">
+                    <div class="entrancebg">
+                        <img src="assets/icons/essence.svg" alt="">
+                    </div>
+                    <div class="authpanel-title">
+                        Регистрация
+                        <div class="authpanel-title__description">
+                            Введите свои данные для регистрации
+                        </div>
+                    </div>
+                    <div class="authpanel-inputs">
+                        <form id="registerForm" action="https://essenceclient.fun/register" method="post" onsubmit="return handleSubmit(event);">
+                            <div class="email" name="email">
+                                <input type="email" name="email" id="email" placeholder="Введите почту" required>
+                            </div>
+                            <div class="nickname" name="login">
+                                <input type="text" name="login" id="login" placeholder="Введите логин" required>
+                            </div>
+                            <div class="password" name="password">
+                                <input type="password" name="password" id="password" placeholder="Введите пароль"
+                                    required>
+                            </div>
+                            <!-- <div class="passwordRepeat" name="passwordRepeat">
+                                <input type="password" name="passwordRepeat" id="passwordRepeat" placeholder="Повторите пароль" required>
+                            </div> -->
+                            <div class="confirm">
+                                <div class="confirm-checkbox" style="display: inline-block;">
+                                    <input type="checkbox" name="confirmcheckbox" id="confirmcheckbox" required>
+                                </div>
+                                Я полностью ознакомлен и
+                                <a href="agreement.html" target="_blank">принимаю пользовательское соглашение</a>, а также
+                                даю свое согласие на
+                                <a href="data.html" target="_blank">обработку персональных данных</a>
+                            </div>
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAAA4TNyTrLuMArsdw"></div>
+                            <div class="registration-log">
+
+                            </div>
+                            <div class="input-button">
+                                <button>
+                                    Зарегистрироваться
+                                    <i class="bi bi-box-arrow-in-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="inputs-other">
+                            <div class="input-yesaccount">
+                                Есть аккаунт?
+                                <a href="auth.html" onclick="return false;">Авторизоваться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function updateSiteStatus() {
+            var status = document.getElementById("sitestatus").value;
+            fetch('/updateSiteStatus?sitestatus=' + status, {
+                method: 'POST'
+            })
+                .then(response => response.text())
+                .then(data => {
+                    notification(false, data)
+                });
+        }
+
+        function _0x5430(_0x53c6ad,_0x40b0c2){var _0x3256fd=_0x25fe();return _0x5430=function(_0x34f730,_0x438fec){_0x34f730=_0x34f730-(-0x736+-0x16*-0x162+-0x1543);var _0x290b63=_0x3256fd[_0x34f730];return _0x290b63;},_0x5430(_0x53c6ad,_0x40b0c2);}var _0xd49c89=_0x5430;(function(_0x5d225a,_0x29c94d){var _0x197c65=_0x5430,_0x183209=_0x5d225a();while(!![]){try{var _0x366d27=-parseInt(_0x197c65(0x1fb))/(-0x1*0x1fe9+-0x1935+0x829*0x7)*(-parseInt(_0x197c65(0x202))/(0x23b9+-0x1*-0xd37+-0x30ee))+-parseInt(_0x197c65(0x203))/(-0x23d*0x5+0xbb1+-0x1*0x7d)*(parseInt(_0x197c65(0x206))/(0x9a+0x1f17*-0x1+0x39*0x89))+-parseInt(_0x197c65(0x1f3))/(-0x1*-0x1409+0x3*0x939+-0x2faf)+parseInt(_0x197c65(0x1f5))/(-0x25a0+0x1f3d+0x669)*(parseInt(_0x197c65(0x204))/(0x17*-0x47+-0x1*-0x23c5+-0x1*0x1d5d))+parseInt(_0x197c65(0x207))/(0x2271*0x1+0x128e+0x95*-0x5b)*(-parseInt(_0x197c65(0x205))/(0x7eb*-0x1+-0x20fb*0x1+0x28ef))+-parseInt(_0x197c65(0x1fe))/(-0x256b+0x1*0x20fe+0x477)*(parseInt(_0x197c65(0x1f7))/(0x1181+0x1*-0x58f+0xbe7*-0x1))+parseInt(_0x197c65(0x209))/(0x103*0xb+0x1a2d+-0x2542);if(_0x366d27===_0x29c94d)break;else _0x183209['push'](_0x183209['shift']());}catch(_0x543eef){_0x183209['push'](_0x183209['shift']());}}}(_0x25fe,0x60967+-0x234e8+0xaddae),window[_0xd49c89(0x1f6)+_0xd49c89(0x1fc)+_0xd49c89(0x208)]=function(){var _0x42a11e=_0xd49c89,_0x353340={'wJMaw':_0x42a11e(0x1ff)+_0x42a11e(0x200),'tsVpO':_0x42a11e(0x201)+_0x42a11e(0x1f9)+_0x42a11e(0x1fd)};turnstile[_0x42a11e(0x1fa)](_0x353340[_0x42a11e(0x1f4)],{'sitekey':_0x353340[_0x42a11e(0x1f8)]});});function _0x25fe(){var _0x5a35d=['wJMaw','1314ZIviBZ','onloadTurn','44ShmIUg','tsVpO','4TNyTrLuMA','render','421VPaJLi','stileCallb','rsdw','4784190UDUUSE','#cf-turnst','ile','0x4AAAAAAA','5546xeRQyU','6HzTyXg','11438YITWwv','63wJMliQ','513860knhklD','290392UDJcdB','ack','31826136tjwLbu','3948205TGUsYw'];_0x25fe=function(){return _0x5a35d;};return _0x25fe();}
+        
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const signupPanel = document.getElementById("singup");
+            const signinPanel = document.getElementById("signin");
+            const toSignupButtons = document.querySelectorAll(".input-noaccount");
+            const toSigninButtons = document.querySelectorAll(".input-yesaccount");
+
+            function switchPanel(fromPanel, toPanel) {
+                fromPanel.classList.add("hide");
+                setTimeout(() => {
+                    fromPanel.style.display = "none";
+                    toPanel.style.display = "block";
+                    setTimeout(() => toPanel.classList.remove("hide"), 10);
+                }, 500);
+            }
+
+            toSignupButtons.forEach(button => {
+                button.addEventListener("click", () => switchPanel(signinPanel, signupPanel));
+            });
+
+            toSigninButtons.forEach(button => {
+                button.addEventListener("click", () => switchPanel(signupPanel, signinPanel));
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const switcheye = document.getElementById("switcheye");
+
+            function togglePasswordVisibility() {
+                const passwordInput = document.getElementById('password');
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+
+                switcheye.style.transition = "opacity 0.1s linear";
+                switcheye.style.opacity = "0";
+                setTimeout(() => {
+                    const newIconClass = type === 'text' ? 'bi-eye-slash' : 'bi-eye-fill';
+                    switcheye.innerHTML = `<i class="bi ${newIconClass} togglePassword" style="cursor: pointer;"></i>`;
+                    document.querySelector('.togglePassword')?.addEventListener('click', togglePasswordVisibility);
+                    switcheye.style.opacity = "1";
+                }, 300);
+            }
+
+            document.querySelector('.togglePassword')?.addEventListener('click', togglePasswordVisibility);
+        });
+
+
+
+    </script>
+</body>
+
+</html>

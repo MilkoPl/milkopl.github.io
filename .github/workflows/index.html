@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="AcidClient - лучший клиент для игры в Minecraft с минималистичным дизайном, оптимизацией и активной поддержкой пользователей.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sharing.css">
+    <link rel="shortcut icon" href="assets/icons/essence.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/dynamicload/dynamicload.css">
+
+    <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+
+    <title>AcidClient ▸ Главная</title>
+</head>
+
+<body>
+    <div id="loader-wrapper">
+        <i class="bi bi-arrow-clockwise"></i>
+    </div>
+    <header id="header">
+        <div class="heading">
+            <div class="heading-title">
+                <div class="title-name">
+                    <a href="index.html">
+                        <span style="color: white;">Acid</span><span
+                            class="root-text--color">Client</span>
+                    </a>
+                </div>
+            </div>
+            <div class="heading-nav" id="main-nav">
+                <nav>
+                    <li>
+                        <i class="bi bi-lightning-fill"></i>
+                        <a href="index.html#advantages">Преимущества</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-camera-video-fill"></i>
+                        <a href="index.html#media">Медиа</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-basket-fill"></i>
+                        <a href="index.html#subscribes">Подписка</a>
+                    </li>
+                </nav>
+            </div>
+            <div class="heading-btn">
+                <button onclick="window.location.href = 'auth'" class="root-background--color">
+                    <span>Войти</span>
+                </button>
+            </div>
+            <div class="heading-bars" onclick="toggleModal()">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+        <div class="mobile-modal" id="mobileModal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="toggleModal()">&times;</span>
+                <nav>
+                    <li>
+                        <i class="bi bi-lightning-fill"></i><a href="index.html#advantages">Преимущества</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-camera-video-fill"></i><a href="index.html#media">Медиа</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-basket-fill"></i><a href="index.html#subscribes">Подписка</a>
+                    </li>
+                    <button onclick="window.location.href = '/auth'" class="mobilebtn root-background--color">
+                        <span>Войти</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="root">
+            <div class="root-vision">
+                <div class="root-vision__title">
+                    Лучший клиент для игры майнкрафт
+                    <div class="root-vision__title-description">
+                        Мы предлагаем вам погрузиться в лучший и увлекательный мир Майнкрафт с нашим лучшим клиентом
+                        <span>Essence</span>Client.
+                    </div>
+                    <div class="root-vision__registration-btn">
+                        <button onclick="url('https://discord.gg/vxkqagnEDd')" class="root-background--color">
+                            Подробнее о нас
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="root-vision__chevron">
+                <a href="index.html#advantages">
+                    <i class="bi bi-chevron-down"></i>
+                </a>
+            </div>
+            <div class="root-advantages" id="advantages">
+                <div class="advantages-title">
+                    Все еще сомневаетесь в покупке?
+                    <div class="advantages-title__description">
+                        Мы составили более 2-х фактов о нашем клиенте
+                    </div>
+                </div>
+                <div class="advantages-main">
+                    <div class="advantages-tabs">
+                        <div class="advantages-tabs__tabs">
+                            <div class="tabs root-background--color">
+                                <div class="tabs-number">
+                                    <img src="assets/advantages/number.svg" alt="">
+                                </div>
+                                <div class="tabs-title">
+                                    <i class="bi bi-star-fill"></i>
+                                    Внешний вид
+                                </div>
+                                <div class="tabs-description">
+                                    Это Клиент, который славится своим минималистичным и функциональным дизайном.
+                                    Внешний вид AcidClient ориентирован на простоту использования и удобство
+                                    навигации.
+                                </div>
+                            </div>
+                            <div class="tabs root-background--color">
+                                <div class="tabs-number">
+                                    <img src="assets/advantages/number.svg" alt="">
+                                </div>
+                                <div class="tabs-title">
+                                    <i class="bi bi-speedometer"></i>
+                                    Оптимизация
+                                </div>
+                                <div class="tabs-description">
+                                    Клиент известен своей оптимизацией и плавной работой в Minecraft.
+                                    Каждое обновление мы стараемся убрать баги-визуализации клиента, мы заботимся только
+                                    о комфортной игре!
+                                </div>
+                            </div>
+                            <div class="tabs root-background--color">
+                                <div class="tabs-number">
+                                    <img src="assets/advantages/number.svg" alt="">
+                                </div>
+                                <div class="tabs-title">
+                                    <i class="bi bi-heart-fill"></i>
+                                    Защита
+                                </div>
+                                <div class="tabs-description">
+                                    Мы вкладываем значительные усилия в обеспечение безопасности своих пользователей.
+                                    Наша команда разработчиков делает все, чтобы предотвратить взлом клиента и защитить
+                                    ваши данные.
+                                </div>
+                            </div>
+                            <div class="tabs root-background--color">
+                                <div class="tabs-number">
+                                    <img src="assets/advantages/number.svg" alt="">
+                                </div>
+                                <div class="tabs-title">
+                                    <i class="bi bi-headset"></i>
+                                    Поддержка
+                                </div>
+                                <div class="tabs-description">
+                                    Мы предлагаем активную и дружелюбную поддержку своим пользователям.
+                                    На нашем Discord-сервере модераторы всегда готовы помочь вам!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="root-screenshots">
+                <div class="screenshots-title">
+                    Скриншоты нашего клиента
+                    <div class="screenshots-title__description">
+                        Мы собрали лист лучших изображений
+                    </div>
+                </div>
+                <div class="screenshots-swaper">
+                    <span>
+                        <img id="slider-image" src="assets/screenshots/screenone.png" alt="screenshot">
+                    </span>
+                </div>
+                <div class="progress-bars">
+                    <div class="progress-bar" id="progress-bar-0"></div>
+                    <div class="progress-bar" id="progress-bar-1"></div>
+                    <div class="progress-bar" id="progress-bar-2"></div>
+                </div>
+            </div>
+            <div class="root-media" id="media">
+                <div class="media-main">
+                    <div class="media-title">
+                        Ознакомься с видеообзором
+                        <div class="media-title__description">
+                            Всего два простых шага и ты готов к игре!
+                        </div>
+                    </div>
+                </div>
+                <div class="media-videos">
+                    <div class="videos videoone">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wiOXSYVFOQc?si=HrVj4OYuNpgx0O42" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="videos videotwo">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pOlCPAqYOOA?si=JKWT-Yx99ndrE3mk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="root-other" id="subscribes">
+                <div class="other-gameplay" id="gameplay">
+                    <div class="nav__title">
+                        КАК НАЧАТЬ ИГРАТЬ?
+                        <div class="nav__title-description">
+                            Всего два простых шага и ты готов к игре!
+                        </div>
+                    </div>
+                    <div class="gameplay-nav__main">
+                        <div class="gameplay-nav__main-tab gameplaymain">
+                            <div class="gameplaymain-main">
+                                <div class="gameplaymain-main__image">
+                                    <img src="assets/icons/essence.svg" alt="" style="width: 41px; height: 41px;">
+                                </div>
+                                <div class="gameplaymain-main__title">
+                                    Приобретите <span>Essence</span>Client!
+                                    <div class="gameplaymain-main__title-description">
+                                        Если у вас еще нет лицензионной версии.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gameplaymain-btn">
+                                <button class="root-background--color" onclick="urlnomethod('/cabinet   ')">
+                                    <i class="bi bi-cart-fill"></i>
+                                    КУПИТЬ
+                                    <span>549</span>₽
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gameplay-nav__main-tab gameplaymain">
+                            <div class="gameplaymain-main">
+                                <div class="gameplaymain-main__image">
+                                    <img src="assets/subscribe/game.svg" alt="">
+                                </div>
+                                <div class="gameplaymain-main__title" onclick='url("cabinet")'>
+                                    Установите <span>Essence</span>DLC!
+                                    <div class="gameplaymain-main__title-description">
+                                        Самый быстрый способ начать играть.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gameplaymain-btn">
+                                <button onclick='url("cabinet")' class="root-background--color">
+                                    <i class="bi bi-cloud-arrow-down-fill"></i>
+                                    Установить
+                                </button>
+                            </div>
+                        </div>
+                        <div class="nav__main-ourdescription">
+                            <div class="ourdescription-text">
+                                Вопросы или проблемы? Посмотри
+                                <span>
+                                    <i class="bi bi-camera-video-fill"></i>
+                                    <a href="https://www.youtube.com/watch?v=MmB9b5njVbA">
+                                        видеоинструкцию
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="other-links" id="links">
+                    <div class="links-nav">
+                        <div class="nav__title">
+                            СЛЕДИ ЗА НАМИ!
+                            <div class="nav__title-description">
+                                Узнавай первым об акциях и новостях.
+                            </div>
+                        </div>
+                        <div class="links-nav__main">
+                            <div class="links-rect__discord linksrect" id="discord"
+                                onclick='url("https://discord.gg/vxkqagnEDd")'>
+                                дискорд
+                            </div>
+                            <div class="links-rect__vkontakte linksrect" id="vkontakte"
+                                onclick='url("https://vk.com/na4ka_leysa")'>
+                                вконтакте
+                            </div>
+                            <div class="links-rect__telegram linksrect" id="telegram"
+                                onclick='url("https://t.me/essenceclient")'>
+                                Telegram
+                            </div>
+                        </div>
+                        <div class="nav__main-ourdescription">
+                            <div class="ourdescription-text">
+                                Хочешь стать медиа-патнером?
+                                <span>
+                                    <i class="bi bi-telegram"></i>
+                                    <a href="https://discord.gg/vxkqagnEDd">
+                                        Напиши нам!
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="questions">
+                <div class="questions-title">
+                    Часто задаваемые вопросы
+                </div>
+                <div class="questions-table">
+                    <div class="tableone table">
+                        <div class="table-main">
+                            <div class="table-title">
+                                Поддержка автора
+                            </div>
+                            <div class="table-description">
+                                Мы рады, что вы присоединились к нашему сообществу.
+                                Мы уверены, что AcidClient станет вашим лучшим выбором для игры в Minecraft!
+                            </div>
+                        </div>
+                        <div class="table-chevron">
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="tabletwo table">
+                        <div class="table-main">
+                            <div class="table-title">
+                                Безопасность и надежность
+                            </div>
+                            <div class="table-description">
+                                AcidClient вкладывает значительные усилия в обеспечение безопасности своих
+                                пользователей.
+                                Наша команда разработчиков делает все возможное, чтобы предотвратить взлом клиента и
+                                защитить ваши данные.
+                            </div>
+                        </div>
+                        <div class="table-chevron">
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="tablethree table">
+                        <div class="table-main">
+                            <div class="table-title">
+                                Широкий выбор модификаций
+                            </div>
+                            <div class="table-description">
+                                С AcidClient вы получаете доступ к широкому спектру модификаций, которые улучшат ваш
+                                игровой процесс в Minecraft. Вам не придется беспокоиться о том, что вас забанят или
+                                кикнут с сервера.
+                            </div>
+                        </div>
+                        <div class="table-chevron">
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="tablefour table">
+                        <div class="table-main">
+                            <div class="table-title">
+                                Быстрые сервера и скачивание
+                            </div>
+                            <div class="table-description">
+                                С AcidClient вы можете быстро скачать и установить клиент и сразу же начать игру
+                                без длительных ожиданий. Мы используем оптимизированные серверы для загрузки, что
+                                позволяет нам обеспечить максимальную скорость скачивания.
+                            </div>
+                        </div>
+                        <div class="table-chevron">
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="fixedNavigation root-background--color" id="fixedNav" style="display: none;">
+        <a href="index.html#header">
+            <i class="bi bi-arrow-up-short"></i>
+        </a>
+    </div>
+    <footer>
+        <div class="footing">
+            <div class="footing-premain">
+                <div class="footing-premain__copyright" style="font-weight: 550;">
+                    Copyright &copy; <span>Essence</span>Client
+                </div>
+                <div class="footing-premain__links">
+                    <nav>
+                        <li>
+                            <a href="https://t.me/essenceclient" target="_blank">
+                                <i class="bi bi-telegram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://discord.gg/vxkqagnEDd" target="_blank">
+                                <i class="bi bi-discord"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=MmB9b5njVbA" target="_blank">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </li>
+                    </nav>
+                </div>
+            </div>
+            <div class="footing-main">
+                <div class="footing-main__mojang">
+                    <div class="mojang-mail">
+                        По всем вопросам, пишите на почту ниже.
+                        <br>
+                        <a href="cdn-cgi/l/email-protection.html#7a3b3b36281f0a1603281f19150c1f08033a1d171b131654080f"><span class="__cf_email__" data-cfemail="f3b2b2bfa196839f8aa196909c8596818ab3949e929a9fdd8186">[email&#160;protected]</span></a> (ПН-ПТ 10:00-18:00 МСК)
+                    </div>
+                    <span>Наш продукт не связан с MojangAB все средства идут на развитие проекта.</span>
+                </div>
+                <div class="footing-main__nav">
+                    <nav>
+                        <li>
+                            <a href="agreement.html">
+                                Пользовательское соглашение
+                            </a>
+                        </li>
+                        <!--                        <li>-->
+                        <!--                            <a href="data">-->
+                        <!--                                Обработка персональных данных-->
+                        <!--                            </a>-->
+                        <!--                        </li>-->
+                        <!--                        <li>-->
+                        <!--                            <a href="offer">-->
+                        <!--                                Торговая оферта-->
+                        <!--                            </a>-->
+                        <!--                        </li>-->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        const _0x149484 = _0x206f;
+        (function (_0x5a07c4, _0x475446) {
+            const _0x786723 = _0x206f,
+                _0x3be336 = _0x5a07c4();
+            while (!![]) {
+                try {
+                    const _0x354ebf =
+                        -parseInt(_0x786723(0xcc)) / (0x18e5 + 0x18c0 * 0x1 + -0x31a4) +
+                        -parseInt(_0x786723(0xc9)) / (-0x2633 + -0x5 * 0x34f + 0x36c0) +
+                        parseInt(_0x786723(0xdc)) /
+                        (-0x1 * -0x1c69 + 0x7 * 0x229 + 0x359 * -0xd) +
+                        (-parseInt(_0x786723(0xce)) / (-0x2166 + 0xd3c + 0x142e)) *
+                        (-parseInt(_0x786723(0x88)) / (0x4de + 0x6da + -0xbb3 * 0x1)) +
+                        -parseInt(_0x786723(0xfb)) /
+                        (0x150 * 0x10 + 0x332 * 0x7 + 0x98 * -0x49) +
+                        parseInt(_0x786723(0xbb)) /
+                        (-0xb2b * -0x1 + -0xc41 * -0x1 + 0x1 * -0x1765) +
+                        (-parseInt(_0x786723(0xb2)) / (0x2 * -0x34a + 0x1633 + -0xf97)) *
+                        (-parseInt(_0x786723(0x8d)) /
+                            (-0xe * 0x3b + 0x1d * -0xc9 + -0x682 * -0x4));
+                    if (_0x354ebf === _0x475446) break;
+                    else _0x3be336["push"](_0x3be336["shift"]());
+                } catch (_0x5c0070) {
+                    _0x3be336["push"](_0x3be336["shift"]());
+                }
+            }
+        })(_0x5351, 0x68cc9 * 0x1 + -0x8f384 + 0xe2878);
+        const photos = [
+            _0x149484(0x97) + _0x149484(0xec) + _0x149484(0x85) + "ng",
+            _0x149484(0x97) + _0x149484(0xec) + _0x149484(0xe0) + "ng",
+            _0x149484(0x97) + _0x149484(0xec) + _0x149484(0x8c) + _0x149484(0xa4),
+        ],
+            sliderImage = document[_0x149484(0x100) + _0x149484(0xbe)](
+                _0x149484(0xe5) + "ge"
+            ),
+            progressBars = document[_0x149484(0xba) + _0x149484(0x90)](
+                _0x149484(0xd9) + _0x149484(0xed)
+            );
+        function _0x206f(_0x3ee39d, _0x3f5399) {
+            const _0x50e66e = _0x5351();
+            return (
+                (_0x206f = function (_0x36af88, _0x16c89f) {
+                    _0x36af88 = _0x36af88 - (-0x7 * 0x32b + 0x1df7 + 0x74a * -0x1);
+                    let _0x22277b = _0x50e66e[_0x36af88];
+                    return _0x22277b;
+                }),
+                _0x206f(_0x3ee39d, _0x3f5399)
+            );
+        }
+        let currentIndex = -0x2425 + -0x1 * -0x1d55 + 0x6d0,
+            intervalTime = -0x56 * 0xe + -0x24b + 0x12b7;
+        function updateProgressBars() {
+            const _0x47c256 = _0x149484,
+                _0x5de9de = {
+                    EqfXm: _0x47c256(0xb0),
+                    hDlIf: _0x47c256(0xaa) + _0x47c256(0x8a),
+                    eAPtT: function (_0xcfdc00, _0x40d934) {
+                        return _0xcfdc00 === _0x40d934;
+                    },
+                    FeHEP: _0x47c256(0xc5),
+                };
+            progressBars[_0x47c256(0x93)]((_0x538d3f, _0x12092a) => {
+                const _0x6c78e1 = _0x47c256;
+                _0x538d3f[_0x6c78e1(0xb6)] = "";
+                const _0x47290e = document[_0x6c78e1(0x105) + _0x6c78e1(0x9f)](
+                    _0x5de9de[_0x6c78e1(0xf4)]
+                );
+                _0x47290e[_0x6c78e1(0xaf)][_0x6c78e1(0xa3)](_0x5de9de[_0x6c78e1(0x81)]),
+                    _0x538d3f[_0x6c78e1(0x84) + "d"](_0x47290e),
+                    _0x5de9de[_0x6c78e1(0x80)](_0x12092a, currentIndex)
+                        ? ((_0x47290e[_0x6c78e1(0x9d)][_0x6c78e1(0xd3)] =
+                            _0x6c78e1(0xb3) + intervalTime + _0x6c78e1(0x86)),
+                            (_0x47290e[_0x6c78e1(0x9d)][_0x6c78e1(0xe2)] =
+                                _0x5de9de[_0x6c78e1(0xe4)]))
+                        : (_0x47290e[_0x6c78e1(0x9d)][_0x6c78e1(0xe2)] = "0");
+            });
+        }
+        function _0x5351() {
+            const _0x5e2e7c = [
+                "1073636zViVJD",
+                "UaHqS",
+                "isIntersec",
+                "vron",
+                "jfZKJ",
+                "transition",
+                "src",
+                "tor",
+                ".other-gam",
+                ".5s\x20ease",
+                "ASKbG",
+                ".progress-",
+                "Loaded",
+                "sHMLF",
+                "2359773erIKVQ",
+                "transform",
+                "DueFi",
+                "LTKIG",
+                "creentwo.p",
+                "target",
+                "width",
+                "show",
+                "FeHEP",
+                "slider-ima",
+                "length",
+                "rpIut",
+                "visible",
+                ".table-che",
+                "display",
+                "MzQeR",
+                "eenshots/s",
+                "bar",
+                "observe",
+                "onscroll",
+                "addEventLi",
+                "CaVEI",
+                "s-tabs",
+                ".videotwo",
+                "EqfXm",
+                "block",
+                "vron\x20i",
+                "translateY",
+                "scrollY",
+                "unobserve",
+                "BbnXm",
+                "7285554iLJzIb",
+                "maxHeight",
+                "-up",
+                "(100px)",
+                "RevOx",
+                "getElement",
+                "YbTFF",
+                "ting",
+                "enshots",
+                "IhxMm",
+                "createElem",
+                "ESElx",
+                "eAPtT",
+                "hDlIf",
+                "mQHme",
+                "KPlzQ",
+                "appendChil",
+                "creenone.p",
+                "ms\x20linear",
+                ".other-lin",
+                "20XRFLBd",
+                ".table-des",
+                "ar-fill",
+                "vbAjq",
+                "creenthree",
+                "489771LVMhON",
+                ".questions",
+                "QaOTu",
+                "torAll",
+                "bi-chevron",
+                "\x20opacity\x200",
+                "forEach",
+                "eplay",
+                "YPfBo",
+                "in-out",
+                "assets/scr",
+                "(0)",
+                "cription",
+                "contains",
+                "YvtDb",
+                ".table",
+                "style",
+                "XooSg",
+                "ent",
+                "0.3s\x20ease-",
+                "tXRPM",
+                "replace",
+                "add",
+                ".png",
+                "dBURp",
+                "5|2|0|1|4|",
+                "stener",
+                "nvDHk",
+                "phTTR",
+                "progress-b",
+                "DOMContent",
+                "opacity",
+                "-down",
+                ".videoone",
+                "classList",
+                "div",
+                "fUwlS",
+                "40CqcmHb",
+                "width\x20",
+                "HHXPW",
+                "ziKSk",
+                "innerHTML",
+                "Yeygq",
+                "remove",
+                "scrollHeig",
+                "querySelec",
+                "6046621EvFYpV",
+                "cRkif",
+                ".advantage",
+                "ById",
+                "JstfY",
+                "0.5s\x20ease,",
+                "transform\x20",
+                ".root-scre",
+                "click",
+                "VeExl",
+                "100%",
+                "split",
+                ".footing",
+                "fixedNav",
+                "294444IKRRuO",
+                "hYWIt",
+                "ZWEgu",
+                "864151CyoztZ",
+                "LNsGl",
+            ];
+            _0x5351 = function () {
+                return _0x5e2e7c;
+            };
+            return _0x5351();
+        }
+        function changeImage() {
+            const _0x398ad8 = _0x149484,
+                _0xac1689 = {
+                    cRkif: _0x398ad8(0xa6) + "3",
+                    XooSg: function (_0x504708, _0x497c64, _0x35ebdf) {
+                        return _0x504708(_0x497c64, _0x35ebdf);
+                    },
+                    YvtDb: _0x398ad8(0xa0) + _0x398ad8(0x96),
+                    MzQeR: function (_0x245d6e) {
+                        return _0x245d6e();
+                    },
+                    nvDHk: function (_0x1ad7bd, _0x4eb7f9, _0xef34fa) {
+                        return _0x1ad7bd(_0x4eb7f9, _0xef34fa);
+                    },
+                    LTKIG: function (_0xed397d, _0x121ad2) {
+                        return _0xed397d % _0x121ad2;
+                    },
+                    rpIut: function (_0x3d9c67, _0x37f9b5) {
+                        return _0x3d9c67 + _0x37f9b5;
+                    },
+                },
+                _0x494fc5 = _0xac1689[_0x398ad8(0xbc)][_0x398ad8(0xc6)]("|");
+            let _0x4be208 = 0x4e1 + -0x1417 + 0xf36;
+            while (!![]) {
+                switch (_0x494fc5[_0x4be208++]) {
+                    case "0":
+                        sliderImage[_0x398ad8(0x9d)][_0x398ad8(0xac)] = "0";
+                        continue;
+                    case "1":
+                        _0xac1689[_0x398ad8(0x9e)](
+                            setTimeout,
+                            () => {
+                                const _0x288358 = _0x398ad8;
+                                sliderImage[_0x288358(0xd4)] = photos[currentIndex];
+                            },
+                            -0xb84 + 0x1c6b * -0x1 + 0xdd5 * 0x3
+                        );
+                        continue;
+                    case "2":
+                        sliderImage[_0x398ad8(0x9d)][_0x398ad8(0xd3)] =
+                            _0xac1689[_0x398ad8(0x9b)];
+                        continue;
+                    case "3":
+                        _0xac1689[_0x398ad8(0xeb)](updateProgressBars);
+                        continue;
+                    case "4":
+                        _0xac1689[_0x398ad8(0xa8)](
+                            setTimeout,
+                            () => {
+                                const _0x269583 = _0x398ad8;
+                                sliderImage[_0x269583(0x9d)][_0x269583(0xac)] = "1";
+                            },
+                            0x1 * 0x1796 + 0x76f * 0x3 + 0x655 * -0x7
+                        );
+                        continue;
+                    case "5":
+                        currentIndex = _0xac1689[_0x398ad8(0xdf)](
+                            _0xac1689[_0x398ad8(0xe7)](
+                                currentIndex,
+                                -0x119f + -0x2ce * -0x1 + 0xed2
+                            ),
+                            photos[_0x398ad8(0xe6)]
+                        );
+                        continue;
+                }
+                break;
+            }
+        }
+        setInterval(changeImage, intervalTime),
+            updateProgressBars(),
+            document[_0x149484(0xba) + _0x149484(0x90)](_0x149484(0x9c))[_0x149484(0x93)](
+                (_0x4f5a7b) => {
+                    const _0x498ea6 = _0x149484,
+                        _0x93400b = {
+                            VeExl: _0x498ea6(0x89) + _0x498ea6(0x99),
+                            RevOx: _0x498ea6(0xe9) + _0x498ea6(0xf6),
+                            YPfBo: _0x498ea6(0xe3),
+                            mQHme: _0x498ea6(0x91) + _0x498ea6(0xfd),
+                            YbTFF: _0x498ea6(0x91) + _0x498ea6(0xad),
+                            fUwlS: function (_0x29dcc9, _0x3d2c53) {
+                                return _0x29dcc9 + _0x3d2c53;
+                            },
+                            jfZKJ: _0x498ea6(0xe9) + _0x498ea6(0xd1),
+                            CaVEI: _0x498ea6(0xc3),
+                        };
+                    _0x4f5a7b[_0x498ea6(0xba) + _0x498ea6(0xd5)](_0x93400b[_0x498ea6(0xd2)])[
+                        _0x498ea6(0xf0) + _0x498ea6(0xa7)
+                    ](_0x93400b[_0x498ea6(0xf1)], () => {
+                        const _0x420e34 = _0x498ea6,
+                            _0xd9a747 = _0x4f5a7b[_0x420e34(0xba) + _0x420e34(0xd5)](
+                                _0x93400b[_0x420e34(0xc4)]
+                            ),
+                            _0x5bb335 = _0x4f5a7b[_0x420e34(0xba) + _0x420e34(0xd5)](
+                                _0x93400b[_0x420e34(0xff)]
+                            );
+                        _0xd9a747[_0x420e34(0xaf)][_0x420e34(0x9a)](_0x93400b[_0x420e34(0x95)])
+                            ? (_0xd9a747[_0x420e34(0xaf)][_0x420e34(0xb8)](
+                                _0x93400b[_0x420e34(0x95)]
+                            ),
+                                (_0xd9a747[_0x420e34(0x9d)][_0x420e34(0xfc)] = null),
+                                _0x5bb335[_0x420e34(0xaf)][_0x420e34(0xa2)](
+                                    _0x93400b[_0x420e34(0x82)],
+                                    _0x93400b[_0x420e34(0x101)]
+                                ),
+                                _0x4f5a7b[_0x420e34(0xaf)][_0x420e34(0xb8)](
+                                    _0x93400b[_0x420e34(0x95)]
+                                ))
+                            : (_0xd9a747[_0x420e34(0xaf)][_0x420e34(0xa3)](
+                                _0x93400b[_0x420e34(0x95)]
+                            ),
+                                (_0xd9a747[_0x420e34(0x9d)][_0x420e34(0xfc)] = _0x93400b[
+                                    _0x420e34(0xb1)
+                                ](_0xd9a747[_0x420e34(0xb9) + "ht"], "px")),
+                                _0x5bb335[_0x420e34(0xaf)][_0x420e34(0xa2)](
+                                    _0x93400b[_0x420e34(0x101)],
+                                    _0x93400b[_0x420e34(0x82)]
+                                ),
+                                _0x4f5a7b[_0x420e34(0xaf)][_0x420e34(0xa3)](
+                                    _0x93400b[_0x420e34(0x95)]
+                                ));
+                    });
+                }
+            ),
+            document[_0x149484(0xf0) + _0x149484(0xa7)](
+                _0x149484(0xab) + _0x149484(0xda),
+                function () {
+                    const _0x3dec9f = _0x149484,
+                        _0x12e74c = {
+                            IhxMm: _0x3dec9f(0xe8),
+                            BbnXm: _0x3dec9f(0xbd) + _0x3dec9f(0xf2),
+                            HHXPW: _0x3dec9f(0xae),
+                            hYWIt: _0x3dec9f(0xf3),
+                            ESElx: _0x3dec9f(0xc7),
+                            DueFi: _0x3dec9f(0x87) + "ks",
+                            dBURp: _0x3dec9f(0xd6) + _0x3dec9f(0x94),
+                            sHMLF: _0x3dec9f(0x8e),
+                            ZWEgu: _0x3dec9f(0xc2) + _0x3dec9f(0x103),
+                        },
+                        _0x3fe2ab = [
+                            _0x12e74c[_0x3dec9f(0xfa)],
+                            _0x12e74c[_0x3dec9f(0xb4)],
+                            _0x12e74c[_0x3dec9f(0xca)],
+                            _0x12e74c[_0x3dec9f(0x106)],
+                            _0x12e74c[_0x3dec9f(0xde)],
+                            _0x12e74c[_0x3dec9f(0xa5)],
+                            _0x12e74c[_0x3dec9f(0xdb)],
+                            _0x12e74c[_0x3dec9f(0xcb)],
+                        ],
+                        _0x2cb495 = new IntersectionObserver(
+                            (_0x4b450c, _0x13408e) => {
+                                const _0x38061b = _0x3dec9f,
+                                    _0x595626 = { ASKbG: _0x12e74c[_0x38061b(0x104)] };
+                                _0x4b450c[_0x38061b(0x93)]((_0x238aa6) => {
+                                    const _0x46d783 = _0x38061b;
+                                    _0x238aa6[_0x46d783(0xd0) + _0x46d783(0x102)] &&
+                                        (_0x238aa6[_0x46d783(0xe1)][_0x46d783(0xaf)][_0x46d783(0xa3)](
+                                            _0x595626[_0x46d783(0xd8)]
+                                        ),
+                                            _0x13408e[_0x46d783(0xf9)](_0x238aa6[_0x46d783(0xe1)]));
+                                });
+                            },
+                            { threshold: 0.1 }
+                        );
+                    _0x3fe2ab[_0x3dec9f(0x93)]((_0x3ab0ff) => {
+                        const _0x5ec27a = _0x3dec9f;
+                        document[_0x5ec27a(0xba) + _0x5ec27a(0x90)](_0x3ab0ff)[_0x5ec27a(0x93)](
+                            (_0x1e597e) => _0x2cb495[_0x5ec27a(0xee)](_0x1e597e)
+                        );
+                    });
+                }
+            ),
+            (window[_0x149484(0xef)] = function () {
+                const _0x3f8fd9 = _0x149484,
+                    _0x375db8 = {
+                        phTTR:
+                            _0x3f8fd9(0xc1) + _0x3f8fd9(0xc0) + _0x3f8fd9(0x92) + _0x3f8fd9(0xd7),
+                        Yeygq: _0x3f8fd9(0xf7) + _0x3f8fd9(0x98),
+                        vbAjq: _0x3f8fd9(0xc8),
+                        tXRPM: function (_0x2ddd51, _0x2cc108) {
+                            return _0x2ddd51 > _0x2cc108;
+                        },
+                        QaOTu: function (_0x1687d5, _0x385e30) {
+                            return _0x1687d5 !== _0x385e30;
+                        },
+                        ziKSk: _0x3f8fd9(0xf5),
+                        JstfY: function (_0x4446be, _0x42eac1, _0x573326) {
+                            return _0x4446be(_0x42eac1, _0x573326);
+                        },
+                        UaHqS: function (_0x11c588, _0x50c3f8) {
+                            return _0x11c588 <= _0x50c3f8;
+                        },
+                        KPlzQ: function (_0x247c34, _0x5ed2c4) {
+                            return _0x247c34 === _0x5ed2c4;
+                        },
+                        LNsGl: _0x3f8fd9(0xf7) + _0x3f8fd9(0xfe),
+                    },
+                    _0x44e813 = document[_0x3f8fd9(0x100) + _0x3f8fd9(0xbe)](
+                        _0x375db8[_0x3f8fd9(0x8b)]
+                    );
+                if (
+                    _0x375db8[_0x3f8fd9(0xa1)](
+                        window[_0x3f8fd9(0xf8)],
+                        0x1e7b + 0x4f7 + -0x2340
+                    ) &&
+                    _0x375db8[_0x3f8fd9(0x8f)](
+                        _0x44e813[_0x3f8fd9(0x9d)][_0x3f8fd9(0xac)],
+                        "1"
+                    )
+                )
+                    (_0x44e813[_0x3f8fd9(0x9d)][_0x3f8fd9(0xea)] =
+                        _0x375db8[_0x3f8fd9(0xb5)]),
+                        _0x375db8[_0x3f8fd9(0xbf)](
+                            setTimeout,
+                            () => {
+                                const _0x27cde5 = _0x3f8fd9;
+                                (_0x44e813[_0x27cde5(0x9d)][_0x27cde5(0xd3)] =
+                                    _0x375db8[_0x27cde5(0xa9)]),
+                                    (_0x44e813[_0x27cde5(0x9d)][_0x27cde5(0xdd)] =
+                                        _0x375db8[_0x27cde5(0xb7)]),
+                                    (_0x44e813[_0x27cde5(0x9d)][_0x27cde5(0xac)] =
+                                        -0x8e9 + 0x1e07 * 0x1 + 0x439 * -0x5);
+                            },
+                            0x5e5 + -0x2281 + 0x1ca6
+                        );
+                else
+                    _0x375db8[_0x3f8fd9(0xcf)](
+                        window[_0x3f8fd9(0xf8)],
+                        -0x1 * -0x1791 + -0x2f * 0xc9 + 0xd88
+                    ) &&
+                        _0x375db8[_0x3f8fd9(0x83)](
+                            _0x44e813[_0x3f8fd9(0x9d)][_0x3f8fd9(0xac)],
+                            "1"
+                        ) &&
+                        ((_0x44e813[_0x3f8fd9(0x9d)][_0x3f8fd9(0xd3)] =
+                            _0x375db8[_0x3f8fd9(0xa9)]),
+                            (_0x44e813[_0x3f8fd9(0x9d)][_0x3f8fd9(0xdd)] =
+                                _0x375db8[_0x3f8fd9(0xcd)]),
+                            (_0x44e813[_0x3f8fd9(0x9d)][_0x3f8fd9(0xac)] =
+                                -0x1402 + -0x13f2 + 0x27f4));
+            });
+    </script>
+</body>
+
+</html>
